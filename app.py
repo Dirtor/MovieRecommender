@@ -200,8 +200,8 @@ st.markdown("""
 def load_data():
     """📦 数据加载函数 - 使用缓存提高性能"""
     try:
-        ratings = pd.read_csv('/Users/dirtortian/Downloads/ml-latest-small/ratings.csv')
-        movies = pd.read_csv('/Users/dirtortian/Downloads/ml-latest-small/movies.csv')
+        ratings = pd.read_csv('data/ratings.csv')
+        movies = pd.read_csv('data/movies.csv')
         df = pd.merge(ratings, movies, on='movieId')
         
         df_with_genres = df.copy()
